@@ -1,0 +1,27 @@
+name: capturekit
+version: 1.0.0
+description: "Page content as clean Markdown for the built-in web_extract tool, through the CaptureKit Content API."
+author: CaptureKit
+license: MIT
+kind: backend
+requires_hermes: ">=0.21.6"
+provides_web_providers:
+  - capturekit
+provides_tools: []
+provides_hooks: []
+provides_middleware: []
+requires_env:
+  - name: CAPTUREKIT_API_KEY
+    description: CaptureKit API key
+    url: https://app.capturekit.dev
+    secret: true
+config_schema:
+  api_key:
+    type: secret
+    env: CAPTUREKIT_API_KEY
+    label: CaptureKit API key
+  main_content_only:
+    type: bool
+    default: true
+    label: Main content only
+    description: Keep the main content of each page and drop navigation, footers and sidebars.
