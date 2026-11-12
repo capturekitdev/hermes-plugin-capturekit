@@ -105,6 +105,16 @@ web:
 |---|---|---|
 | `main_content_only` | `true` | Keep the main content of each page and drop navigation, footers and sidebars. |
 
+Set it in the plugin's settings form (Plugins tab of the Hermes desktop app), or in `~/.hermes/config.yaml`:
+
+```yaml
+plugins:
+  entries:
+    capturekit:
+      settings:
+        main_content_only: false
+```
+
 The backend is extract only, so keep a search backend for `web_search`. The tools above work with or without this setting.
 
 ## Example prompts
