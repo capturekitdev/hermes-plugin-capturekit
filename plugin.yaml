@@ -1,13 +1,17 @@
 name: capturekit
-version: 1.0.0
-description: "Page content as clean Markdown for the built-in web_extract tool, through the CaptureKit Content API."
+version: 1.1.0
+description: "Web pages for Hermes: clean Markdown of any page, screenshots and PDFs (full page, element or mobile view), and AI page analysis, through the CaptureKit API. Also a web_extract backend."
 author: CaptureKit
 license: MIT
 kind: backend
 requires_hermes: ">=0.21.6"
 provides_web_providers:
   - capturekit
-provides_tools: []
+provides_tools:
+  - capturekit_page_content
+  - capturekit_screenshot
+  - capturekit_analyze
+  - capturekit_usage
 provides_hooks: []
 provides_middleware: []
 requires_env:
